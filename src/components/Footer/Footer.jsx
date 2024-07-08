@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className="bg-gradient-to-r from-pink-100 to-pink-500">Footer</div>
   )
 }
 
