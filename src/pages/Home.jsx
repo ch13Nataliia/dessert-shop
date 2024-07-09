@@ -2,14 +2,13 @@
 import Cake1 from '../assets/desserts/1.png';
 import Cake2 from '../assets/macaroon_cake.png';
 import Cake3 from '../assets/fruit_cake.png';
-import BannerOne from '../assets/backgroundBanner/3.png';
-
-const bgImage = {
-  backgroundImage: `url(${BannerOne})`,
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center',
-};
+import SpecialImg from '../assets/special.png'
+import Occasion1 from '../assets/occasion/5.png';
+import Occasion2 from '../assets/occasion/4.png';
+import Occasion3 from '../assets/occasion/1.png';
+import Occasion4 from '../assets/occasion/2.png';
+import Occasion5 from '../assets/occasion/3.png';
+import Occasion6 from '../assets/backgroundBanner/3.png';
 
 const CakeMenu = [
   {
@@ -37,9 +36,42 @@ const CakeMenu = [
     price: 15,
   },
 ];
+
+const OccasionMenu = [
+  {
+    id: 1,
+    name: 'Birthday',
+    image: Occasion1,
+  },
+  {
+    id: 2,
+    name: 'Thank you',
+    image: Occasion2,
+  },
+  {
+    id: 3,
+    name: 'new baby',
+    image: Occasion3,
+  },
+  {
+    id: 4,
+    name: 'wedding',
+    image: Occasion4,
+  },
+  {
+    id: 5,
+    name: 'for teachers',
+    image: Occasion5,
+  },
+  {
+    id: 6,
+    name: 'sent with love',
+    image: Occasion6,
+  },
+];
 const Home = () => {
   return (
-    <div className="container my-16 space-y-4">
+    <div className="container my-16 space-y-8">
       {' '}
       <h2 className="text-3xl font-bold text-gray-400 border-b-[2px] pb-2">
         Trending Now
@@ -67,26 +99,38 @@ const Home = () => {
         </div>
       </div>
       {/* banner_one section */}
-      <div style={bgImage}>
-        <div className="container min-h-[550px] ">
-          <div className=" text-white max-w-[400px]  space-y-6 mt-8 font-bold">
-            <h3 className="text-3xl pt-8">
-              A Cakes bring happiness
-            </h3>
-            <p className="text-xl">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Repellat, omnis. Voluptatibus eveniet tempore molestias animi
-              magnam eaque ab sequi ratione, temporibus, consequatur ipsa
-              laborum odit voluptatum delectus eligendi id! Voluptates. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Sit quisquam
-              ullam, perferendis, vero incidunt porro, dicta assumenda atque
-              animi rem voluptas qui tempora deserunt sequi consequuntur velit
-              tenetur modi eligendi.
-            </p>
-            <button className="bg-pink-400/70 text-white text-3xl p-4 rounded-md hover:bg-pink-500 hover:scale-105 duration-300 mb-8">
-              Shop Now
-            </button>
-          </div>
+      <div className="grid sm:grid-cols-1 lg:grid-cols-2 ">
+        <div>
+          <img src={SpecialImg} className='h-full'/>
+        </div>
+        <div className="mx-auto text-center justify-center  font-bold p-16 space-y-4 max-h-[500px]">
+          <h2 className="text-5xl text-gray-400 ">Special offer</h2>
+          <p className="text-lg text-gray-400  ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+            odit! Eligendi repellendus unde, maxime, porro possimus nisi ullam
+            libero doloribus assumenda consectetur velit necessitatibus!
+           
+          </p>
+          <button className='bg-pink-500/50 p-4 text-2xl uppercase rounded-md mt-8 text-white'>buy now</button>
+        </div>
+      </div>
+      {/* info home section */}
+      <div className=" space-y-8">
+        <h2 className="text-5xl text-center text-gray-400 font-bold">What is the occasion?</h2>
+        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {OccasionMenu.map((occasion) => (
+            <div
+              key={occasion.id}
+              className="rounded overflow-hidden shadow-lg flex flex-col cursor-pointer text-center"
+            >
+              <div className="relative">
+                <img src={occasion.image} alt="" className="w-full" />
+              </div>
+              <div className="px-6 py-4 mb-auto uppercase text-gray-400 font-bold text-2xl">
+                {occasion.name}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
