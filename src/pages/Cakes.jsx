@@ -4,6 +4,7 @@ import Cake1 from '../assets/CakeImg/strawberry.webp';
 import Cake2 from '../assets/CakeImg/chocolate.webp';
 import Cake3 from '../assets/CakeImg/raspberry.webp';
 import Cake4 from '../assets/CakeImg/blueberry.webp';
+import Testimanial from '../components/Testimanial/Testimanial';
 
 const CakeMenu = [
   {
@@ -105,7 +106,9 @@ const Cakes = () => {
         </div>
       </div>
       {/* text section */}
-      <div className='container '>Hello</div>
+      <div className="container ">
+   <Testimanial />
+      </div>
     </div>
   );
 };
