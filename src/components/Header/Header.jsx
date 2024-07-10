@@ -1,5 +1,5 @@
 // import React from 'react'
-
+import { Link } from 'react-router-dom';
 import BgImage from '../../assets/HeroBackground.png';
 
 const bgImage = {
@@ -41,12 +41,12 @@ const Header = () => {
             <ul className="hidden sm:flex space-x-10 mt-8">
               {Menu.map((item) => (
                 <li key={item.id}>
-                  <a
-                    href={item.link}
+                  <Link
+                    to={item.link}
                     className=" font-bold text-white text-xl hover:text-pink-500 "
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
