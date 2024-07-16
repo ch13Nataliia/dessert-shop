@@ -1,4 +1,5 @@
 // import React from 'react'
+import { Link } from 'react-router-dom';
 import Cake1 from '../assets/desserts/1.png';
 import Cake2 from '../assets/macaroon_cake.png';
 import Cake3 from '../assets/fruit_cake.png';
@@ -18,6 +19,8 @@ const CakeMenu = [
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe vitae ab quos ea tempora eaque velit quisquam iusto debitis inventore adipisci',
     price: 27,
+    link: '/chococake',
+   
   },
   {
     id: 2,
@@ -26,6 +29,7 @@ const CakeMenu = [
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe vitae ab quos ea tempora eaque velit quisquam iusto debitis inventore adipisci',
     price: 20,
+    link: '/macaroons',
   },
   {
     id: 3,
@@ -34,6 +38,7 @@ const CakeMenu = [
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe vitae ab quos ea tempora eaque velit quisquam iusto debitis inventore adipisci',
     price: 15,
+    link: '/fruitcake',
   },
 ];
 
@@ -92,7 +97,13 @@ const Home = () => {
                 <p className="text-lg text-gray-500/70 text-start p-4">
                   {cake.description}
                 </p>
+                <div className='flex justify-between p-4'>
+                <Link to={cake.link}><button className='bg-gray-400 p-3 text-white rounded-md ml-5 font-bold text-xl'>buy now</button></Link>
+                   
                 <p className="font-bold text-2xl">{cake.price} &pound;</p>
+                </div>
+               
+                
               </div>
             ))}
           </div>

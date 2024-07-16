@@ -22,14 +22,11 @@ const Menu = [
   },
   {
     id: 3,
-    name: 'Cakes',
+    name: 'Shop',
     link: '/cakes',
   },
-  {
-    id: 4,
-    name: 'Macaroons',
-    link: '/macaroons',
-  },
+
+
 ];
 
 const Header = () => {

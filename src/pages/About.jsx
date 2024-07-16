@@ -74,12 +74,11 @@ const About = () => {
               I agree to terms and conditions
             </span>
           </form>
-          <div className='text-center mt-8'>
+          <div className="text-center mt-8">
             <button className="bg-gray-400/70 text-xl text-white p-2 uppercase align-center max-w-[120px]">
-            Sign up
-          </button>
+              Sign up
+            </button>
           </div>
-          
         </div>
         <div className="space-y-6 text-center text-gray-400 text-lg">
           <h2 className="text-5xl text-gray-400  mt-6">Dessert and Joy</h2>
@@ -107,7 +106,9 @@ const About = () => {
           </button>
         </div>
       </div>
-    </div>
+     
+      </div>
+  
   );
 };
 

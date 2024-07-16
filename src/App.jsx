@@ -5,6 +5,9 @@ import Macaroons from "./pages/Macaroons";
 import Cakes from "./pages/Cakes";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
+import ChocoCake from "./pages/ChocoCake";
+import FruitCake from "./pages/FruitCake";
+
 
 function App() {
   return (
@@ -15,6 +18,8 @@ function App() {
           <Route path="about" element={ <About />}/>
           <Route path="macaroons" element={<Macaroons />}/>
           <Route path="cakes" element={<Cakes />}/>
+          <Route path="chococake" element={<ChocoCake />}/>
+          <Route path="fruitcake" element={<FruitCake />}/>
           <Route path="*" element={<NotFound />}/>
         </Route>
       </Routes>
