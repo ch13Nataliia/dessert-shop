@@ -5,9 +5,10 @@ import { GiCakeSlice } from 'react-icons/gi';
 import { MdCardGiftcard } from 'react-icons/md';
 
 import Image1 from '../assets/fruit/fruit_cake.png';
+
 const FruitCake = () => {
   return (
-<div className="container">
+    <div className="container">
       <div className="grid sm:grid-cols-1 lg:grid-cols-2  ">
         {/* left section */}
         <div className="space-y-4 mt-4 px-4">
@@ -26,16 +27,12 @@ const FruitCake = () => {
           </div>
           {/* choice section */}
           <div className="space-y-4 mt-4 ">
-   
             <input
               type="text"
               placeholder="Select size"
               className="border border-gray-[2px] w-full p-2 rounded-md cursor-pointer"
-              
             />
-        
 
-            
             <input
               type="text"
               placeholder="Select Delivery Date"
@@ -113,7 +110,7 @@ const FruitCake = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FruitCake
+export default FruitCake;
