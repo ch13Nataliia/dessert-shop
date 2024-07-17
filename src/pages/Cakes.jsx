@@ -5,7 +5,7 @@ import Cake2 from '../assets/CakeImg/chocolate.webp';
 import Cake3 from '../assets/CakeImg/raspberry.webp';
 import Cake4 from '../assets/CakeImg/blueberry.webp';
 import Testimanial from '../components/Testimanial/Testimanial';
-
+import BannerCake from '../assets/CakeImg/banner_cake.webp';
 const CakeMenu = [
   {
     id: 1,
@@ -38,7 +38,8 @@ const CakeMenu = [
 ];
 const Cakes = () => {
   return (
-    <div className="space-y-6 mt-4">
+    <div className="space-y-2 mt-4">
+     <div><img src={BannerCake} alt="" className='min-h-[350px]'/></div>
       <div className="container  bg-pink-100/50">
         <div className="text-center pt-8 space-y-6">
           <h1 className="text-5xl text-gray-500 font-bold">
@@ -107,7 +108,7 @@ const Cakes = () => {
       </div>
       {/* text section */}
       <div className="container ">
-   <Testimanial />
+        <Testimanial />
       </div>
     </div>
   );

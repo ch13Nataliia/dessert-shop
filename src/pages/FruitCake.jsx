@@ -26,29 +26,46 @@ const FruitCake = () => {
             </div>
           </div>
           {/* choice section */}
-          <div className="space-y-4 mt-4 ">
-            <input
-              type="text"
-              placeholder="Select size"
-              className="border border-gray-[2px] w-full p-2 rounded-md cursor-pointer"
-            />
+          <form className="space-y-4 mx-auto ">
+              <select className="py-2.5 px-2 w-full text-md text-gray-500 rounded-md bg-gray-100 border-[2px] border-gray-200 cursor-pointer">
+                <option selected>Choose size</option>
+                <option value="sm">Small</option>
+                <option value="md">Medium</option>
+                <option value="lg">Large</option>
+              </select>
+              <div className="flex justify-between">
+                {' '}
+                <input
+                  type="date"
+                  className="py-2.5 px-2 w-[45%] text-md text-gray-500 rounded-md bg-gray-100 border-[2px] border-gray-200 cursor-pointer"
+                />
+                <input
+                  type="time"
+                  value="00:00"
+                  className="py-2.5 px-2.5 w-[45%] text-md text-gray-500 rounded-md bg-gray-100 border-[2px] border-gray-200 cursor-pointer"
+                />
+              </div>
 
-            <input
-              type="text"
-              placeholder="Select Delivery Date"
-              className="border border-gray-[2px] w-full p-2 rounded-md cursor-pointer"
-            />
-            <input
-              type="text"
-              placeholder="Select tin"
-              className="border border-gray-[2px] w-full p-2 rounded-md cursor-pointer"
-            />
-            <div className="text-center">
-              <button className="bg-gray-400 text-white uppercase px-4 py-2 rounded-2xl w-[70%]">
-                select
-              </button>
-            </div>
-          </div>
+              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                Add a message
+              </label>
+              <textarea
+                id="message"
+                rows="4"
+                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 "
+                placeholder="Add a hand piped message for &pound;5.00..."
+              ></textarea>
+
+              <div className="text-center">
+                <button
+                  onClick={() => {}}
+                  className="bg-gray-400 text-white uppercase px-4 py-2 rounded-2xl w-[70%] hover:bg-gray-200 hover:text-gray-500 duration-200 hover:scale-105 m-6"
+                >
+                  select
+                </button>
+              </div>
+            </form>
+
           {/* description section */}
           <div className="space-y-4 mt-4">
             <h2 className="uppercase text-2xl text-gray-500">description</h2>
