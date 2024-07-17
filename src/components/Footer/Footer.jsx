@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container text-white">
         <div className="grid frid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div className="mt-4">
-            <h3 className="font-bold text-2xl">Dessert & Joy</h3>
+            <h3 className="font-bold text-2xl">Dessert  &amp; Joy</h3>
             <p className="text-sm max-w-[300px] mt-4">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Laboriosam nemo maiores, magni labore ipsam recusandae. Rerum
@@ -46,9 +46,7 @@ const Footer = () => {
                   <li className="hover:text-pink-500 hover:scale-105 duration-200 cursor-pointer">
                     Cakes
                   </li>
-                  <li className="hover:text-pink-500   hover:scale-105 duration-200 cursor-pointer">
-                    Macaroons
-                  </li>
+
                 </ul>
               </div>
               {/* second links */}
@@ -63,9 +61,7 @@ const Footer = () => {
                   <li className="hover:text-pink-500 hover:scale-105 duration-300 cursor-pointer">
                     Privacy Policy
                   </li>
-                  <li className="hover:text-pink-500 hover:scale-105 duration-300 cursor-pointer">
-                    QA
-                  </li>
+
                 </ul>
               </div>
             </div>

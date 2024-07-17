@@ -3,7 +3,6 @@ import { TbTruckDelivery } from 'react-icons/tb';
 import { FaMapLocation } from 'react-icons/fa6';
 import { GiCakeSlice } from 'react-icons/gi';
 import { MdCardGiftcard } from 'react-icons/md';
-
 import Image1 from '../assets/macaroonImg/macaroon_cake.png';
 
 const Macaroons = () => {
@@ -11,13 +10,19 @@ const Macaroons = () => {
     <div className="container">
       <div className="grid sm:grid-cols-1 lg:grid-cols-2  ">
         {/* left section */}
-        <div className="space-y-4 mt-4 px-4">
-          <img src={Image1} alt="" />
+        <div className="container">
+          {' '}
+          <img
+            src={Image1}
+            alt="image 1"
+            className="h-full w-full object-cover"
+          />
         </div>
+
         {/* right section */}
-        <div className="space-y-4 mt-4 px-4 ">
+        <div className="space-y-8 mt-4 px-4 ">
           {/* title section */}
-          <div className="space-y-4">
+          <div className="space-y-8">
             <h1 className="text-4xl text-gray-500 ">Fruit Cake</h1>
             <div className="flex justify-between uppercase text-red-500">
               <p>100% vegetarian</p>
@@ -110,7 +115,7 @@ const Macaroons = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Macaroons
+export default Macaroons;

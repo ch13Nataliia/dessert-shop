@@ -8,9 +8,9 @@ import About from "./pages/About";
 import ChocoCake from "./pages/ChocoCake";
 import FruitCake from "./pages/FruitCake";
 
-
 function App() {
   return (
+  
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
