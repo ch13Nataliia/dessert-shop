@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import Cake1 from '../assets/desserts/1.png';
 import Cake2 from '../assets/macaroon_cake.png';
 import Cake3 from '../assets/fruit_cake.png';
-import SpecialImg from '../assets/special.png';
+// import SpecialImg from '../assets/special.png';
+
 import Occasion1 from '../assets/occasion/5.png';
 import Occasion2 from '../assets/occasion/4.png';
 import Occasion3 from '../assets/occasion/1.png';
@@ -11,10 +12,11 @@ import Occasion4 from '../assets/occasion/2.png';
 import Occasion5 from '../assets/occasion/3.png';
 import Occasion6 from '../assets/backgroundBanner/3.png';
 import BgImage from '../assets/HeroBackground.png';
-import { FaRegStar } from 'react-icons/fa';
 import { TiStarFullOutline } from 'react-icons/ti';
 import { TiStarHalfOutline } from 'react-icons/ti';
-
+import Sweets from '../assets/sweets.webp';
+import Sweets1 from '../assets/sweets1.webp';
+import Sweets2 from '../assets/sweets2.webp';
 const CakeMenu = [
   {
     id: 1,
@@ -127,9 +129,7 @@ const Home = () => {
 
       <div className="container my-16 space-y-8">
         {' '}
-        <h2 className="text-5xl italic text-gray-400 pb-2">
-          Trending Now
-        </h2>
+        <h2 className="text-5xl italic text-gray-400 pb-2">Trending Now</h2>
         <div className="text-center  mx-auto space-y-2">
           {/* card section */}
           <div className="">
@@ -140,7 +140,7 @@ const Home = () => {
                     <img src={cake.image} alt="cake1" />
 
                     <div className="">
-                      <h3 className="text-2xl text-gray-500 italic font-bold">
+                      <h3 className="text-2xl text-gray-500 italic ">
                         {cake.name}
                       </h3>
                     </div>
@@ -159,59 +159,118 @@ const Home = () => {
           </div>
         </div>
         {/* banner_one section */}
+        <div className="grid lg:grid-cols-2 gap-4">
+          <div className="h-full">
+            <div>
+              <img src={Sweets} className="" />
+            </div>
+            <div className="text-center m-4">
+              <h2 className="uppercase text-2xl italic  text-gray-500">
+                Selection boxes
+              </h2>
+            </div>
 
-        <div className='grid lg:grid-cols-2 '>
-          {/* right section */}
-          <div><img src={SpecialImg} className="h-full" /></div>
-             {/* left section */}
-             <div> <div className="mx-auto text-center justify-center  font-bold p-16 space-y-4 max-h-[500px]">
-            <h2 className="text-5xl text-gray-400 ">Special offer</h2>
-            <p className="text-lg text-gray-400  ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-              odit! Eligendi repellendus unde, maxime, porro possimus nisi ullam
-              libero doloribus assumenda consectetur velit necessitatibus!
-            </p>
-            <button className="bg-pink-500/50 p-4 text-2xl uppercase rounded-md mt-8 text-white">
-              buy now
-            </button>
-          </div></div>
-        </div>
-        {/* <div className="grid sm:grid-cols-1 lg:grid-cols-2 ">
-          <div>
-            <img src={SpecialImg} className="h-full" />
-          </div>
-          <div className="mx-auto text-center justify-center  font-bold p-16 space-y-4 max-h-[500px]">
-            <h2 className="text-5xl text-gray-400 ">Special offer</h2>
-            <p className="text-lg text-gray-400  ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-              odit! Eligendi repellendus unde, maxime, porro possimus nisi ullam
-              libero doloribus assumenda consectetur velit necessitatibus!
-            </p>
-            <button className="bg-pink-500/50 p-4 text-2xl uppercase rounded-md mt-8 text-white">
-              buy now
-            </button>
-          </div>
-        </div> */}
-        {/* info home section */}
-        <div className=" space-y-8">
-          <h2 className="text-5xl text-center text-gray-400 font-bold">
-            What is the occasion?
-          </h2>
-          <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {OccasionMenu.map((occasion) => (
-              <div
-                key={occasion.id}
-                className="rounded overflow-hidden shadow-lg flex flex-col cursor-pointer text-center"
-              >
-                <div className="relative">
-                  <img src={occasion.image} alt="" className="w-full" />
-                </div>
-                <div className="px-6 py-4 mb-auto uppercase text-gray-400 font-bold text-2xl">
-                  {occasion.name}
+            <div className="leading-loose tracking-wider grid lg:grid-cols-3 md:grid-cols-1 list-none gap-4">
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam tenetur voluptatum facilis autem saepe, placeat enim
+                  nihil perferendis, provident molestiae, laboriosam eum ea odit
+                  recusandae deserunt ducimus obcaecati fugiat dignissimos?
+                </p>
+                <div className="text-center m-4">
+                  <button className="bg-gray-400 px-6 text-white rounded-md uppercase italic">
+                    here
+                  </button>
                 </div>
               </div>
-            ))}
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam tenetur voluptatum facilis autem saepe, placeat enim
+                  nihil perferendis, provident molestiae, laboriosam eum ea odit
+                  recusandae deserunt ducimus obcaecati fugiat dignissimos?
+                </p>{' '}
+                <div className="text-center m-4">
+                  <button className="bg-gray-400 px-6 text-white rounded-md uppercase italic">
+                    here
+                  </button>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam tenetur voluptatum facilis autem saepe, placeat enim
+                  nihil perferendis, provident molestiae, laboriosam eum ea odit
+                  recusandae deserunt ducimus obcaecati fugiat dignissimos?
+                </p>{' '}
+                <div className="text-center m-4">
+                  <button className="bg-gray-400 px-6 text-white rounded-md uppercase italic">
+                    here
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <div className=" grid lg:grid-cols-1 gap-4 ">
+            <div className="">
+              <img src={Sweets1} className="w-full" />
+              <div className=" grid gap-2">
+                <h2 className="uppercase text-2xl mt-4">
+                  A slice of happiness
+                </h2>
+                <p className="text-xs">
+                  From large cakes to bite-sized treats, with next day delivery
+                  available.
+                </p>
+                <div>
+                  <button className="uppercase text-xl border-b-[2px]">
+                    explore cakes
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="">
+              <img src={Sweets2} className="w-full" />
+              <div className=" grid gap-2">
+                <h2 className="uppercase text-2xl mt-4">
+                  Bestselling Brownies
+                </h2>
+                <p className="text-xs">
+                  Our handmade brownies are ideal for gifting (or for treating
+                  yourself).
+                  <div>
+                    <button className="uppercase text-xl border-b-[2px]">
+                      shop now
+                    </button>
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* info home section */}
+      <div className=" space-y-8">
+        <h2 className="text-5xl text-center text-gray-400 italic">
+          What is the occasion?
+        </h2>
+        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {OccasionMenu.map((occasion) => (
+            <div
+              key={occasion.id}
+              className="rounded overflow-hidden shadow-lg flex flex-col cursor-pointer text-center"
+            >
+              <div className="relative">
+                <img src={occasion.image} alt="" className="w-full" />
+              </div>
+              <div className="px-6 py-4 mb-auto uppercase text-gray-400  text-2xl">
+                {occasion.name}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
