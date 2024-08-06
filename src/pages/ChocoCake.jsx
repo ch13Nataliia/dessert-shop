@@ -9,16 +9,39 @@ import ImageOne from '../assets/explore/img1.webp';
 import ImageTwo from '../assets/explore/img2.webp';
 import ImageThree from '../assets/explore/img4.webp';
 import ImageFour from '../assets/explore/img6.webp';
-
+import ImageFive from '../assets/explore/img3.jfif';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const ExploreCollection = [
   { id: 1, image: ImageOne, name: 'retirement gifts' },
   { id: 2, image: ImageTwo, name: 'occasion gifts' },
   { id: 3, image: ImageThree, name: 'treats delivery' },
   { id: 4, image: ImageFour, name: 'new parrent gifts' },
+  { id: 5, image: ImageFive, name: 'cookie delivery' },
 ];
 
 const ChocoCake = () => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 1024 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 1024, min: 800 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 800, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
   return (
     <div className="">
       <img src={BgImage} className="w-full" />
@@ -136,22 +159,27 @@ const ChocoCake = () => {
             </div>
           </div>
         </div>
-        {/* expore section */}
+        {/* slide section */}
       </div>
       <div className="bg-gray-100 my-4">
         <div>
-          <h2 className="text-5xl italic py-4 px-4 text-gray-500">Explore Collections</h2>
+          <h2 className="text-5xl italic py-4 px-4 text-gray-500">
+            Explore Collections
+          </h2>
         </div>
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 px-6 ">
-          {ExploreCollection.map((item) => (
-            
-            <div key={item.id} className='grid gap-4 pb-4 cursor-pointer'>
-              <img src={item.image} alt="explore_collection" />
-              <h3 className='text-2xl text-gray-500 uppercase hover:scale-105 duration-300 translate-x-3'>{item.name}</h3>
+        <Carousel responsive={responsive}>
+          {ExploreCollection.map((photo) => (
+            <div key={photo.id} className="m-2">
+              <img src={photo.image} alt="" />
+              <h3 className="text-2xl text-gray-500 uppercase hover:scale-105 duration-300 translate-x-3">
+                {photo.name}
+              </h3>
             </div>
           ))}
-        </div>
+        </Carousel>
+        ;
       </div>
+      {/* slide section */}
     </div>
   );
 };
