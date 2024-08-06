@@ -3,10 +3,20 @@ import { TbTruckDelivery } from 'react-icons/tb';
 import { FaMapLocation } from 'react-icons/fa6';
 import { GiCakeSlice } from 'react-icons/gi';
 import { MdCardGiftcard } from 'react-icons/md';
-// import { FaChevronDown } from "react-icons/fa";
-
 import Image1 from '../assets/chocolate/chocoImg1.jpg';
 import BgImage from '../assets/banner.jpg';
+import ImageOne from '../assets/explore/img1.webp';
+import ImageTwo from '../assets/explore/img2.webp';
+import ImageThree from '../assets/explore/img4.webp';
+import ImageFour from '../assets/explore/img6.webp';
+
+
+const ExploreCollection = [
+  { id: 1, image: ImageOne, name: 'retirement gifts' },
+  { id: 2, image: ImageTwo, name: 'occasion gifts' },
+  { id: 3, image: ImageThree, name: 'treats delivery' },
+  { id: 4, image: ImageFour, name: 'new parrent gifts' },
+];
 
 const ChocoCake = () => {
   return (
@@ -126,7 +136,21 @@ const ChocoCake = () => {
             </div>
           </div>
         </div>
-
+        {/* expore section */}
+      </div>
+      <div className="bg-gray-100 my-4">
+        <div>
+          <h2 className="text-5xl italic py-4 px-4 text-gray-500">Explore Collections</h2>
+        </div>
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 px-6 ">
+          {ExploreCollection.map((item) => (
+            
+            <div key={item.id} className='grid gap-4 pb-4 cursor-pointer'>
+              <img src={item.image} alt="explore_collection" />
+              <h3 className='text-2xl text-gray-500 uppercase hover:scale-105 duration-300 translate-x-3'>{item.name}</h3>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

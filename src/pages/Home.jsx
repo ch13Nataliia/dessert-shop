@@ -113,7 +113,7 @@ const Home = () => {
           <div className="grid grid-cols-1">
             <div className="flex flex-col justify-center gap-4 pt-12 mt-10 sm:pt-0 text-center">
               <h3 className="uppercase text-3xl text-white">fruity cakes</h3>
-              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white">
+              <h2 className="text-5xl sm:text-6xl lg:text-7xl  text-white">
                 simply delicious
               </h2>
               <div>
@@ -168,6 +168,10 @@ const Home = () => {
               <h2 className="uppercase text-2xl italic  text-gray-500">
                 Selection boxes
               </h2>
+              <p className="p-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
+                molestiae obcaecati fugiat dignissimos? recusandae.
+              </p>
             </div>
 
             <div className="leading-loose tracking-wider grid lg:grid-cols-3 md:grid-cols-1 list-none gap-4">
