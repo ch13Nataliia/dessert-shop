@@ -1,8 +1,8 @@
 // import React from 'react'
 import { Link } from 'react-router-dom';
-import Cake1 from '../assets/desserts/1.png';
-import Cake2 from '../assets/macaroon_cake.png';
-import Cake3 from '../assets/fruit_cake.png';
+import Cake1 from '../assets/chocoCake.webp';
+import Cake2 from '../assets/fruitCake.webp';
+import Cake3 from '../assets/birthdayBox.webp';
 // import SpecialImg from '../assets/special.png';
 
 import Occasion1 from '../assets/occasion/5.png';
@@ -34,7 +34,7 @@ const CakeMenu = [
   },
   {
     id: 2,
-    name: 'Macaroons',
+    name: 'Fruit cake',
     image: Cake2,
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe vitae ab quos ea tempora eaque velit quisquam iusto debitis inventore adipisci',
@@ -48,7 +48,7 @@ const CakeMenu = [
   },
   {
     id: 3,
-    name: 'Fruit Cake',
+    name: 'Birthday Box',
     image: Cake3,
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe vitae ab quos ea tempora eaque velit quisquam iusto debitis inventore adipisci',
@@ -106,7 +106,7 @@ const Home = () => {
     <div className="">
       {/* hero section */}
       <div
-        className="min-h-[500px] sm:min-h-[450px] flex justify-center items-center"
+        className="h-[650px] sm:min-h-[450px] flex justify-center items-center"
         style={bgImage}
       >
         <div>
@@ -135,7 +135,7 @@ const Home = () => {
           <div className="">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {CakeMenu.map((cake) => (
-                <div key={cake.id} className="shadow-xl rounded-md ">
+                <div key={cake.id} className="shadow-lg rounded-md ">
                   <Link to={cake.link}>
                     <img src={cake.image} alt="cake1" />
 
@@ -152,6 +152,7 @@ const Home = () => {
                         {cake.star5}
                       </div>
                     </div>
+                    <p className='text-left p-4'>{cake.description}</p>
                   </Link>
                 </div>
               ))}
@@ -162,7 +163,7 @@ const Home = () => {
         <div className="grid lg:grid-cols-2 gap-4">
           <div className="h-full">
             <div>
-              <img src={Sweets} className="" />
+              <img src={Sweets} className="h-full" />
             </div>
             <div className="text-center m-4">
               <h2 className="uppercase text-2xl italic  text-gray-500">
@@ -170,49 +171,25 @@ const Home = () => {
               </h2>
               <p className="p-4">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
-                molestiae obcaecati fugiat dignissimos? recusandae.
+                molestiae obcaecati fugiat dignissimos? recusandae. Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Dolore, odio. Dolor
+                commodi distinctio quo itaque natus iste? Nostrum odio natus
+                voluptate fugit repellat nihil, repellendus quis ratione veniam
+                voluptates consequuntur. Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. Quaerat mollitia tempore eligendi doloribus
+                laudantium. Nostrum accusamus libero, ad placeat vitae saepe.
+                Qui nisi soluta quaerat dolore ipsam, quas aliquid repellendus!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore numquam vitae nihil ex? Eveniet modi, ullam id
+                inventore nemo quaerat repellat fugit. Debitis nemo iusto
+                aperiam! Iure perspiciatis doloremque cupiditate. Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Odit quasi
+                voluptatibus laborum consequatur ipsa animi explicabo, possimus
+                debitis, necessitatibus natus ad sint dolorum suscipit deleniti
+                ex beatae. Temporibus, ullam architecto.
               </p>
-            </div>
-
-            <div className="leading-loose tracking-wider grid lg:grid-cols-3 md:grid-cols-1 list-none gap-4">
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam tenetur voluptatum facilis autem saepe, placeat enim
-                  nihil perferendis, provident molestiae, laboriosam eum ea odit
-                  recusandae deserunt ducimus obcaecati fugiat dignissimos?
-                </p>
-                <div className="text-center m-4">
-                  <button className="bg-gray-400 px-6 text-white rounded-md uppercase italic">
-                    here
-                  </button>
-                </div>
-              </div>
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam tenetur voluptatum facilis autem saepe, placeat enim
-                  nihil perferendis, provident molestiae, laboriosam eum ea odit
-                  recusandae deserunt ducimus obcaecati fugiat dignissimos?
-                </p>{' '}
-                <div className="text-center m-4">
-                  <button className="bg-gray-400 px-6 text-white rounded-md uppercase italic">
-                    here
-                  </button>
-                </div>
-              </div>
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam tenetur voluptatum facilis autem saepe, placeat enim
-                  nihil perferendis, provident molestiae, laboriosam eum ea odit
-                  recusandae deserunt ducimus obcaecati fugiat dignissimos?
-                </p>{' '}
-                <div className="text-center m-4">
-                  <button className="bg-gray-400 px-6 text-white rounded-md uppercase italic">
-                    here
-                  </button>
-                </div>
+              <div className="text-2xl bg-gray-400 text-white hover:bg-gray-100 hover:text-gray-500 hover:scale-105 duration-300 translate-4 p-2">
+                <button className="uppercase ">explore</button>
               </div>
             </div>
           </div>
@@ -265,12 +242,12 @@ const Home = () => {
           {OccasionMenu.map((occasion) => (
             <div
               key={occasion.id}
-              className="rounded overflow-hidden shadow-lg flex flex-col cursor-pointer text-center"
+              className="rounded overflow-hidden shadow-lg flex flex-col cursor-pointer text-center hover:scale-105 duration-200 "
             >
               <div className="relative">
                 <img src={occasion.image} alt="" className="w-full" />
               </div>
-              <div className="px-6 py-4 mb-auto uppercase text-gray-400  text-2xl">
+              <div className="px-6 py-4 mb-auto uppercase text-gray-400  text-2xl ">
                 {occasion.name}
               </div>
             </div>

@@ -21,12 +21,18 @@ const ExploreCollection = [
   { id: 5, image: ImageFive, name: 'cookie delivery' },
 ];
 
+const bgImage = {
+  backgroundImage: `url(${BgImage})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+};
 const ChocoCake = () => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 1024 },
-      items: 5,
+      items: 4,
     },
     desktop: {
       breakpoint: { max: 1024, min: 800 },
@@ -44,7 +50,27 @@ const ChocoCake = () => {
 
   return (
     <div className="">
-      <img src={BgImage} className="w-full" />
+       <div
+        className="min-h-[500px] sm:min-h-[450px] flex justify-end items-center text-right"
+        style={bgImage}
+      >
+        <div>
+          <div className="grid lg:grid-cols-1 text-right pr-6">
+            <div className="flex flex-col  gap-4 pt-12 mt-10 sm:pt-0 text-right">
+              <h3 className="uppercase text-3xl text-pink-500">Chocolate cakes</h3>
+              <h2 className="text-5xl sm:text-6xl lg:text-7xl  text-pink-500">
+                simply delicious
+              </h2>
+              <div>
+                <button className="rounded-full px-6 py-2 mt-4 bg-white text-pink-500 text-2xl uppercase">
+                  {' '}
+                  shop now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="container">
         <div className="grid sm:grid-cols-1 lg:grid-cols-2  ">
